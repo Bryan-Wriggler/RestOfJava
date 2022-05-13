@@ -17,8 +17,26 @@ public class Program {
         // Draw a short red diagonal on the canvas
         canvas.pause();
         canvas.setColor(Color.red);
-        for (int i = 0; i < 100; i++) {
-            canvas.plot(i, i);
+        
+        //sin function
+        MathFunction sin = (x) -> { 
+        	return (int) (200 * Math.sin(Math.PI * x / 360));
+        };
+        
+        //circle function
+        MathFunction circle = (x) -> { 
+        	return (int) (Math.sqrt(240 * 240 - x * x));
+        };
+        
+        //absolute value function
+        MathFunction absolute = (x) -> {
+        	return Math.abs(x);
+        };
+        
+        for (int x = -240; x <= 240; x++) {
+        	int y = circle.function(x);
+            canvas.plot(x, y);
+            canvas.plot(x,  -y);
         }
 
         // Pause and close the canvas then terminate the program.
