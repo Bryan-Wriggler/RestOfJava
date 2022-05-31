@@ -11,7 +11,7 @@ public class Program {
         // Create the canvas instance, set its range to x:[-360, 360] and y:[-240, 240] then 
         // open it on the screen. Use canvas.plot(pX, pY) to plot a point at the (pX, pY) coords
         canvas = new Canvas();
-        canvas.setRange(-360, -360, 360, 360);
+        canvas.setRange(-720, -480, 720, 480);
         canvas.open();
 
         // Draw a short red diagonal on the canvas
@@ -141,7 +141,7 @@ public class Program {
     	//another characteristic: can throw nothing as parameter (which is an array of 0 length)
     	
     	for (int i=0; i < function.length; i++) {
-    		for (int x = -360; x <= 360; x++) {
+    		for (int x = -480; x <= 480; x++) {
     			canvas.setColor(function[i].getColor());
         		canvas.plot(x,  function[i].function(x));
         		canvas.plot(x,  -function[i].function(x));
