@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="BookMap/src"/>
+	<classpathentry kind="src" path="FuncPlotter/src"/>
+	<classpathentry kind="src" path="Serialization/src"/>
+	<classpathentry kind="lib" path="FuncPlotter/graphics.jar"/>
+	<classpathentry kind="lib" path="Serialization/lib/canvas.jar"/>
+	<classpathentry kind="lib" path="Serialization/lib/gson-2.9.0.jar"/>
+	<classpathentry kind="output" path="BookMap/bin"/>
+</classpath>

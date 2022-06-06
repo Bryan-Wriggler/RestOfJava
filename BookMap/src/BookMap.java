@@ -1,6 +1,7 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Scanner;
 import java.util.TreeMap;
 
@@ -41,6 +42,33 @@ public class BookMap {
 			
 			//close linScan
 			lineScan.close();
+		}
+		
+		//get the word from user, and let them test it
+		System.out.print("Enter a word (q to quit): ");
+		String word = console.nextLine();
+		
+		while (!word.equals("q")) {
+			int occurance = 0;
+			if (bookMap.containsKey(word)) { //to prevent errors
+				occurance = bookMap.get(word);
+			}
+			
+			//print out result, and get the new user input (fence post)
+			System.out.println("Frequency of " + word + ": " + occurance);
+			System.out.println();
+			System.out.print("Enter a word (q to quit): ");
+			word = console.nextLine();
+		}
+		
+		//share all words in alphabetical order that occur more than 200 times
+		for (String key : bookMap.keySet()) { //give us all keys
+			int num = bookMap.get(key);
+			if (num >= 200) {
+				System.out.println(key + ": " + num);
+				
+			}
+			
 		}
 		
 		//close scanner
